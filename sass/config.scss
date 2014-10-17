@@ -1,0 +1,15 @@
+$icons: sprite-map("icons/*.png", $spacing: 100px, $icons-sprite-dimensions: true);
+
+@mixin background ($url, $position) {
+	background: {
+		image: sprite-url($icons);
+		repeat: no-repeat;
+		position: sprite-position($icons, $url, $position);
+	}
+}
+
+@mixin box-sizing {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
